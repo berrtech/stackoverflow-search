@@ -1,0 +1,24 @@
+
+.wrapper{
+  height: 100%;
+}
+
+.panel-wrapper{
+  padding: 10px;
+  float: left;
+  max-width: 50%;
+  height: 100%;  
+  transition: transform 0.3s;
+  transition-timing-function: cubic-bezier(.05, .69, .14, 1);
+}
+
+.results-wrapper{
+  composes: panel-wrapper;
+  transform: translate(50%, 0);
+}
+
+.quick-info-wrapper{
+  composes: panel-wrapper;
+  transform: translate(100%, 0);
+  
+}

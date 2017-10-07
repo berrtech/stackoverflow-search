@@ -1,0 +1,19 @@
+.wrapper{
+  overflow: auto;
+  height: 100%;
+  padding: 15px;
+}
+
+.inner-wrapper{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.answer-count{
+  font-size: 24px;
+  padding: 50px 0 10px;
+}
+
+.loader-wrapper{
+  text-align: center;
+}

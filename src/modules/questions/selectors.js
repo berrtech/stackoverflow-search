@@ -1,0 +1,1 @@
+export const getQuestionById = (state, questionId) => state[questionId]
