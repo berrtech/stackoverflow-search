@@ -29,7 +29,9 @@ const Item = ({item, style}) => {
         {item.title && <CardTitle title={decodeHtml(item.title)} />}
 
         <CardText>
-          <span dangerouslySetInnerHTML={{__html: decodeHtml(item.body)}}/>
+          <div 
+            dangerouslySetInnerHTML={{__html: decodeHtml(item.body)}}
+          />
         </CardText>
       </Card>
     </div>

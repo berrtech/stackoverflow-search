@@ -5,7 +5,6 @@ import Item from './Item/';
 import CircularProgress from 'material-ui/CircularProgress/'
 import Waypoint from 'react-waypoint'
 
-
 const QuestionComponent = ({question, answers, isLoadingAnswers, loadMoreAnswers, has_more}) => {
   return (
     <div

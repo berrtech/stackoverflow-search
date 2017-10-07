@@ -17,6 +17,10 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 app.use(express.static('build'));
 
+app.get('/*', (req, res) => {
+  res.sendFile(__dirname + '/build/index.html');
+});
+
 http.listen(process.env.PORT || 5000, function(){
   console.log('listening on *:' + (process.env.PORT || 5000));
 });

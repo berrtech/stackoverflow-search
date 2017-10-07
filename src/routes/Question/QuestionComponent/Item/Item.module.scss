@@ -1,6 +1,12 @@
 .wrapper{
   padding-left: 60px;
-  position: relative
+  position: relative;
+
+  pre{
+    overflow-x: auto;
+    background: #eff0f1;
+    padding: 5px;
+  }
 }
 
 .score{
