@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-app.use(express.static('public'));
+app.use(express.static('build'));
 
 http.listen(process.env.PORT || 5000, function(){
   console.log('listening on *:' + (process.env.PORT || 5000));
