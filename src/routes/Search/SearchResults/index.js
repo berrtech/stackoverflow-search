@@ -30,6 +30,8 @@ export default class SearchResults extends React.Component{
     }
   }
 
+  closePanel = () => this.setState({showPanel: false})
+
   getQuickInfoWrapperStyle = () => {
     const { showPanel } = this.state;
     
@@ -72,7 +74,8 @@ export default class SearchResults extends React.Component{
       handleTagClick, 
       getResultsWrapperStyle, 
       getQuickInfoWrapperStyle,
-      handleQuestionClick 
+      handleQuestionClick,
+      closePanel
     } = this;
     const { user, tag } = this.state;
 
@@ -103,6 +106,7 @@ export default class SearchResults extends React.Component{
             onAuthorClick={handleAuthorClick} 
             onTagClick={handleTagClick}
             onQuestionClick={handleQuestionClick}
+            onClosePanel={closePanel}
           />
         </div>
 

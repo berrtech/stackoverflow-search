@@ -1,6 +1,8 @@
 import React from 'react';
 import Paper from 'material-ui/Paper'
 import CircularProgress from 'material-ui/CircularProgress/'
+import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import IconButton from 'material-ui/IconButton';
 
 import {
   Table,
@@ -43,7 +45,8 @@ class ResultsTable extends React.Component{
       error, 
       onLoadMore,
       has_more,
-      onQuestionClick
+      onQuestionClick,
+      onClosePanel
     } = this.props;
 
     const { height } = this.state;
@@ -60,6 +63,14 @@ class ResultsTable extends React.Component{
           className={cx('inner-wrapper')}
         >
           <p className={cx('title')} style={{height: TITLE_HEIGHT}}>{title}</p>
+          {onClosePanel && (
+            <IconButton 
+              onClick={onClosePanel}
+              className={cx('close-button')}
+            >
+              <NavigationClose />
+            </IconButton>
+          )}
 
           <Table
             selectable={false}

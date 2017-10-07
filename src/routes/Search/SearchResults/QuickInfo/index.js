@@ -43,7 +43,7 @@ class QuickInfo extends Component {
   
   render() {
     const { getTitle, getFetchFunction, getParams } = this;
-    const { onAuthorClick, onTagClick, onQuestionClick} = this.props
+    const { onAuthorClick, onTagClick, onQuestionClick, onClosePanel} = this.props
     return (
       <Results 
         fetchFunction={getFetchFunction()}
@@ -52,6 +52,7 @@ class QuickInfo extends Component {
         onAuthorClick={onAuthorClick}
         onQuestionClick={onQuestionClick}
         onTagClick={onTagClick}
+        onClosePanel={onClosePanel}
       />
     );
   }
