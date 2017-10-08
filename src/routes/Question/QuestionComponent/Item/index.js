@@ -33,7 +33,7 @@ const Item = ({item, style}) => {
             dangerouslySetInnerHTML={{__html: decodeHtml(item.body)}}
             ref={ref => {
               if (!ref) return;
-              // если в ответе или вопросе будет html-код, он не отобразится,
+              // если в ответе или вопросе будет html код, он не отобразится,
               // поскольку преобразуется в DOM-элементы
               // придется руками выдергивать и вставлять как текст
               const codeBlocks = [...ref.getElementsByTagName('code')];
