@@ -20,35 +20,23 @@ export default class Search extends React.Component {
     const { location } = this.props;
     const { handleHomeButtonClick, handleQuestionClick } = this;
 
-    const isLoading = false
-
     return (
       <div
         className={cx('wrapper')}
       >
-        {isLoading && (
-          <CircularProgress 
-            size={70}
-            thickness={7}
-            className={cx('loader')}
+        <div 
+          key='homebutton'
+          className={cx('home-button-wrapper')}
+        >
+          <HomeButton 
+            onClick={handleHomeButtonClick}
           />
-        )}
-
-        {!isLoading && [
-          <div 
-            key='homebutton'
-            className={cx('home-button-wrapper')}
-          >
-            <HomeButton 
-              onClick={handleHomeButtonClick}
-            />
-          </div>,
-          <SearchResults 
-            key='searchresults'
-            searchQuery={qs.parse(location.search).q}
-            onQuestionClick={handleQuestionClick}
-          />
-        ]}
+        </div>,
+        <SearchResults 
+          key='searchresults'
+          searchQuery={qs.parse(location.search).q}
+          onQuestionClick={handleQuestionClick}
+        />
       </div>
     )
   }
